@@ -32,6 +32,12 @@ export default {
 			updatedAt: null,
 		};
 	},
+
+	metaInfo() {
+		return {
+			title: 'Robots.txt Editor',
+		}
+	},
 	computed: {
 		contentsDiff () {
 			return this.contents !== this.originalContents;
