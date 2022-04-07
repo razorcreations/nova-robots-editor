@@ -1,9 +1,5 @@
-Nova.booting((Vue, router, store) => {
-  router.addRoutes([
-    {
-      name: 'nova-robots-editor',
-      path: '/nova-robots-editor',
-      component: require('./components/Tool'),
-    },
-  ])
+import Tool from './components/Tool'
+
+Nova.booting((app, store) => {
+  Nova.inertia('NovaRobotsEditor', Tool)
 })

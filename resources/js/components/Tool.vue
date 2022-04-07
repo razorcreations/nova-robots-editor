@@ -1,3 +1,5 @@
+
+
 <template>
   <div>
     <heading class="mb-6">
@@ -5,13 +7,13 @@
     </heading>
     <textarea
       v-model="contents"
-      class="w-full form-control form-input form-input-bordered py-3 h-64 my-3"
+      class="w-full h-64 py-3 my-3 form-control form-input form-input-bordered"
       style="min-height: 60vh"
     />
 	<p v-if="updatedAt" class="mb-1">Last updated: {{ updatedAt }}</p>
     <button
       type="button"
-      class="btn btn-default btn-primary inline-flex items-center relative mr-3"
+      class="inline-flex items-center flex-shrink-0 px-4 text-sm font-bold text-white rounded shadow focus:outline-none focus:ring bg-primary-500 hover:bg-primary-400 active:bg-primary-600 dark:text-gray-800 h-9"
       :class="{'opacity-50 cursor-not-allowed': btnDisabled || !contentsDiff}"
       :disabled="btnDisabled || !contentsDiff"
       @click.prevent="submit"
